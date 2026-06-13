@@ -3,27 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>SmartContentAI</title>
-  <meta name="description" content="SmartContentAI - Global AI-powered SaaS for multilingual content, SEO, automation, and cloud services.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXXXX-X');
-  </script>
 
   <!-- Crisp Chatbot Integration -->
   <script type="text/javascript">
     window.$crisp=[];
     window.CRISP_WEBSITE_ID="dd4e9e53-2015-40f2-853f-17cdb6eff82d";
     (function(){
-      d=document;
-      s=d.createElement("script");
-      s.src="https://client.crisp.chat/l.js";
-      s.async=1;
+      d=document;s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";s.async=1;
       d.getElementsByTagName("head")[0].appendChild(s);
     })();
   </script>
@@ -46,22 +34,27 @@
   </script>
 
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333;}
-    header {background:#004080; color:#fff; text-align:center; padding:40px 20px;}
-    section {padding:40px 20px; background:#fff; margin:20px auto; max-width:900px; border-radius:8px;}
-    .card {background:#f0f8ff; padding:20px; border-radius:6px; margin:10px;}
-    footer {text-align:center; background:#004080; color:#fff; padding:15px; margin-top:30px;}
+    body {font-family: Arial; margin:0; padding:0; background:#f9f9f9; color:#333;}
+    header {background:#004080; color:#fff; text-align:center; padding:20px;}
+    section {padding:20px; margin:20px auto; max-width:900px; background:#fff; border-radius:8px;}
+    .card {background:#f0f8ff; padding:15px; border-radius:6px; margin:10px;}
+    button {padding:10px 20px; margin:5px; border:none; border-radius:5px; background:#0073e6; color:#fff; cursor:pointer;}
+    button:hover {background:#005bb5;}
+    footer {text-align:center; background:#004080; color:#fff; padding:15px;}
+    .dark-mode {background:#121212; color:#f1f1f1;}
+    .dark-mode section {background:#1e1e1e; color:#f1f1f1;}
   </style>
 </head>
 <body>
   <header>
     <h1>SmartContentAI</h1>
     <p>Global SaaS platform for multilingual content and automation</p>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
 
   <!-- Features -->
   <section id="features">
-    <h2>🔑 Features</h2>
+    <h2>🔑 Key Features</h2>
     <div class="card">🌐 Multilingual AI</div>
     <div class="card">📈 SEO Optimization</div>
     <div class="card">☁️ Cloud SaaS</div>
@@ -70,7 +63,7 @@
 
   <!-- Subscription Plans -->
   <section id="plans">
-    <h2>📦 Plans</h2>
+    <h2>📦 Subscription Plans</h2>
     <div class="card">Basic – $12/month</div>
     <div class="card">Pro – $29/month</div>
     <div class="card">Enterprise – $99/month</div>
@@ -78,10 +71,23 @@
 
   <!-- Payment -->
   <section id="payment">
-    <h2>💳 Payment</h2>
-    <p>IBAN: EG660022012880211112491757001</p>
-    <button>PayPal</button>
-    <button>Stripe</button>
+    <h2>💳 Payment Methods</h2>
+    <p>Bank Transfer: IBAN EG660022012880211112491757001</p>
+    <button onclick="window.location.href='https://www.paypal.com/paypalme/drzyogo'">Pay with PayPal</button>
+    <button onclick="alert('Stripe integration coming soon')">Pay with Stripe</button>
+  </section>
+
+  <!-- Try the Model -->
+  <section id="ai-demo">
+    <h2>🤖 Try the Model</h2>
+    <button onclick="document.getElementById('output').innerText='AI generated demo content...'">Try Demo</button>
+    <div id="output"></div>
+  </section>
+
+  <!-- Smart Chatbot -->
+  <section id="chatbot">
+    <h2>🤖 Smart Chatbot</h2>
+    <p>Ask me anything about SmartContentAI and I will answer instantly.</p>
   </section>
 
   <!-- User Dashboard -->
@@ -101,61 +107,36 @@
   </section>
 
   <script>
-    // Sign Up with Free Trial
-    const signupForm = document.getElementById('signupForm');
-    signupForm.addEventListener('submit', async (e) => {
+    function toggleDarkMode(){document.body.classList.toggle("dark-mode");}
+    const signupForm=document.getElementById('signupForm');
+    signupForm.addEventListener('submit',async(e)=>{
       e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      try {
-        const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
-        const user = userCredential.user;
-        const startDate = new Date();
-        const endDate = new Date();
-        endDate.setDate(startDate.getDate() + 7); // أسبوع مجاني
-
-        await db.collection('users').doc(user.uid).set({
-          email: user.email,
-          plan: "Trial",
-          trialStart: startDate.toISOString(),
-          trialEnd: endDate.toISOString()
-        });
-
-        document.getElementById('userData').innerText = "Free Trial started for: " + user.email;
-      } catch (error) {
-        alert(error.message);
-      }
+      const email=document.getElementById('email').value;
+      const password=document.getElementById('password').value;
+      try{
+        const userCredential=await firebase.auth().createUserWithEmailAndPassword(email,password);
+        const user=userCredential.user;
+        await db.collection('users').doc(user.uid).set({email:user.email,plan:"Basic"});
+        document.getElementById('userData').innerText="User registered: "+user.email;
+      }catch(error){alert(error.message);}
     });
-
-    // Login and check trial
-    const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', async (e) => {
+    const loginForm=document.getElementById('loginForm');
+    loginForm.addEventListener('submit',async(e)=>{
       e.preventDefault();
-      const email = document.getElementById('loginEmail').value;
-      const password = document.getElementById('loginPassword').value;
-      try {
-        const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
-        const user = userCredential.user;
-        const doc = await db.collection('users').doc(user.uid).get();
-        const data = doc.data();
-
-        const now = new Date();
-        if (data.plan === "Trial" && new Date(data.trialEnd) < now) {
-          await db.collection('users').doc(user.uid).update({ plan: "Basic" });
-          document.getElementById('userData').innerText = "Trial ended. Upgraded to Basic plan.";
-        } else {
-          document.getElementById('userData').innerText = "Logged in: " + user.email + " | Plan: " + data.plan;
-        }
-      } catch (error) {
-        alert(error.message);
-      }
+      const email=document.getElementById('loginEmail').value;
+      const password=document.getElementById('loginPassword').value;
+      try{
+        const userCredential=await firebase.auth().signInWithEmailAndPassword(email,password);
+        const user=userCredential.user;
+        document.getElementById('userData').innerText="Logged in: "+user.email;
+      }catch(error){alert(error.message);}
     });
   </script>
 
   <!-- FAQ -->
   <section id="faq">
     <h2>❓ FAQ</h2>
-    <p>How do I subscribe? Choose a plan and pay online.</p>
+    <p>How do I subscribe? Choose a plan and pay via Bank transfer, PayPal, or Stripe.</p>
     <p>Can I cancel anytime? Yes.</p>
   </section>
 
@@ -174,32 +155,39 @@
     </form>
   </section>
 
+  <!-- Contact Us -->
+  <section id="contact">
+    <h2>📞 Contact Us</h2>
+    <p>Email: support@smartcontentai.com</p>
+    <p>Phone: +201126674337</p>
+  </section>
+
   <footer>
     <p>© 2026 SmartContentAI</p>
   </footer>
 
   <!-- Service Worker -->
   <script>
-    const swCode = `
-      self.addEventListener('install', event => {
+    const swCode=`
+      self.addEventListener('install',event=>{
         event.waitUntil(
-          caches.open('smartcontent-cache').then(cache => {
+          caches.open('smartcontent-cache').then(cache=>{
             return cache.addAll(['./index.html']);
           })
         );
       });
-      self.addEventListener('fetch', event => {
+      self.addEventListener('fetch',event=>{
         event.respondWith(
-          caches.match(event.request).then(response => {
-            return response || fetch(event.request);
+          caches.match(event.request).then(response=>{
+            return response||fetch(event.request);
           })
         );
       });
     `;
-    const blob = new Blob([swCode], {type: 'application/javascript'});
-    const swUrl = URL.createObjectURL(blob);
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register(swUrl).then(() => console.log('Service Worker Registered'));
+    const blob=new Blob([swCode],{type:'application/javascript'});
+    const swUrl=URL.createObjectURL(blob);
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register(swUrl).then(()=>console.log('Service Worker Registered'));
     }
   </script>
 </body>
