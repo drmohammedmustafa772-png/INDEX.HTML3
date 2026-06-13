@@ -38,6 +38,10 @@
   }
   </script>
 
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#004080">
+
   <style>
     body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; transition:background 0.3s, color 0.3s;}
     header {background:#004080; color:#fff; text-align:center; padding:40px 20px;}
@@ -135,12 +139,20 @@
   <!-- Smart Chatbot -->
   <section id="chatbot">
     <h2>🤖 Smart Chatbot</h2>
-    <iframe src="https://your-chatbot-service.com/embed" width="100%" height="400"></iframe>
+    <p>Ask me anything about SmartContentAI and I will answer instantly.</p>
   </section>
+
+  <!-- Crisp Chatbot Integration -->
+  <script type="text/javascript">
+    window.$crisp=[];window.CRISP_WEBSITE_ID="YOUR-CRISP-ID";
+    (function(){
+      d=document;s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";s.async=1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
 
   <!-- FAQ Section -->
   <section id="faq">
     <h2>❓ Frequently Asked Questions</h2>
-    <p><strong>How do I subscribe?</strong> Choose a plan and pay via bank transfer, PayPal, or Stripe.</p>
-    <p><strong>Can I cancel anytime?</strong> Yes, you can cancel your subscription at any time.</p>
-    <p><strong>Is my data secure?</strong> Absolutely 
+    <p><strong>How do I subscribe?</strong> Choose a plan and pay via bank transfer, PayPal, or Stripe 
