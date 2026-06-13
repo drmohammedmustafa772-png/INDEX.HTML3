@@ -57,8 +57,10 @@
   <!-- Main Buttons -->
   <div class="buttons">
     <a href="#features" class="button">View Features</a>
+    <a href="#plans" class="button">Subscription Plans</a>
     <a href="#payment" class="button">Payment Methods</a>
     <a href="#ai-demo" class="button">Try the Model</a>
+    <a href="#chatbot" class="button">Smart Chatbot</a>
     <a href="#faq" class="button">FAQ</a>
     <a href="#testimonials" class="button">Testimonials</a>
     <a href="#newsletter" class="button">Newsletter</a>
@@ -76,6 +78,16 @@
     </div>
   </section>
 
+  <!-- Subscription Plans -->
+  <section id="plans">
+    <h2>📦 Subscription Plans</h2>
+    <div class="features">
+      <div class="card"><h3>Basic</h3><p>$12/month – Access to AI content creation.</p></div>
+      <div class="card"><h3>Pro</h3><p>$29/month – Includes SEO tools, automation, and analytics.</p></div>
+      <div class="card"><h3>Enterprise</h3><p>$99/month – Full features, priority support, and custom solutions.</p></div>
+    </div>
+  </section>
+
   <!-- Payment Section -->
   <section id="payment">
     <h2>💳 Payment Methods</h2>
@@ -86,15 +98,9 @@
       <li><strong>Phone:</strong> 00201126674337</li>
       <li><strong>SWIFT:</strong> ABRKEGCAXXX</li>
     </ul>
-    <form action="mailto:yourname@example.com" method="post" enctype="text/plain">
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
-      <label for="message">Notes or Transfer Details:</label><br>
-      <textarea id="message" name="message" rows="4" required></textarea><br><br>
-      <input type="submit" value="Send">
-    </form>
+    <p>Or pay online:</p>
+    <button class="button">Pay with PayPal</button>
+    <button class="button">Pay with Stripe</button>
   </section>
 
   <!-- AI Demo Section -->
@@ -104,9 +110,41 @@
     <div id="output"></div>
   </section>
 
-  <!-- Amazon Affiliate -->
-  <section id="amazon">
-    <h2>🛒 Amazon Products</h2>
-    <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
-    src="https://www.amazon
- 
+  <!-- Smart Chatbot -->
+  <section id="chatbot">
+    <h2>🤖 Smart Chatbot</h2>
+    <p>Ask me anything about SmartContentAI and I will answer instantly.</p>
+    <iframe src="https://your-chatbot-service.com/embed" width="100%" height="400"></iframe>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <p><strong>How do I subscribe?</strong> Choose a plan and pay via bank transfer, PayPal, or Stripe.</p>
+    <p><strong>Can I cancel anytime?</strong> Yes, you can cancel your subscription at any time.</p>
+    <p><strong>Is my data secure?</strong> Absolutely, we use cloud SaaS with advanced security.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>💬 Testimonials</h2>
+    <p>"SmartContentAI helped me grow my business internationally!" – Client A</p>
+    <p>"The automation tools saved me hours every week." – Client B</p>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter">
+    <h2>📩 Newsletter Signup</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <input type="submit" value="Subscribe">
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>📞 Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea 
