@@ -63,9 +63,6 @@
             <li><strong>الهاتف:</strong> 2</li>
             <li><strong>SWIFT:</strong> ABRKEGCAXXX</li>
         </ul>
-        <p>يرجى تحويل المبلغ عبر أي بنك أو خدمة تحويل متاحة لديك، ثم إرسال إيصال التحويل عبر النموذج التالي:</p>
-
-        <!-- نموذج تواصل -->
         <form action="mailto:yourname@example.com" method="post" enctype="text/plain">
             <label for="name">الاسم الكامل:</label><br>
             <input type="text" id="name" name="name" required><br><br>
@@ -73,8 +70,6 @@
             <input type="email" id="email" name="email" required><br><br>
             <label for="message">ملاحظات أو تفاصيل التحويل:</label><br>
             <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <label for="receipt">إيصال الدفع (اختياري):</label><br>
-            <input type="file" id="receipt" name="receipt"><br><br>
             <input type="submit" value="إرسال">
         </form>
     </section>
@@ -115,5 +110,34 @@
         document.getElementById("output").innerText = data.choices[0].message.content;
     }
     </script>
+
+    <!-- ========================= -->
+    <!-- Issue Templates (توثيق) -->
+    <!-- ========================= -->
+
+    <!-- bug_report.yml -->
+    <!--
+    name: "Bug report"
+    description: "استخدم هذا النموذج للإبلاغ عن مشكلة تقنية في SmartContentAI."
+    title: "[Bug] - اكتب عنوان المشكلة هنا"
+    labels: ["bug"]
+    -->
+
+    <!-- feature_request.yml -->
+    <!--
+    name: "Feature request"
+    description: "استخدم هذا النموذج لاقتراح ميزة جديدة لمشروع SmartContentAI."
+    title: "[Feature] - اكتب عنوان الاقتراح هنا"
+    labels: ["enhancement"]
+    -->
+
+    <!-- custom_template.yml -->
+    <!--
+    name: "SmartContentAI Custom Issue"
+    description: "نموذج مخصص لتوثيق مشاكل الدفع أو تكامل API."
+    title: "[Custom] - اكتب عنوانًا واضحًا هنا"
+    labels: ["payment", "api"]
+    assignees: ["drmohammedmustafa772-png"]
+    -->
 </body>
 </html> 
