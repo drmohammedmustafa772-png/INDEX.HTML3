@@ -5,17 +5,6 @@
   <title>SmartContentAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Crisp Chatbot Integration -->
-  <script type="text/javascript">
-    window.$crisp=[];
-    window.CRISP_WEBSITE_ID="dd4e9e53-2015-40f2-853f-17cdb6eff82d";
-    (function(){
-      d=document;s=d.createElement("script");
-      s.src="https://client.crisp.chat/l.js";s.async=1;
-      d.getElementsByTagName("head")[0].appendChild(s);
-    })();
-  </script>
-
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
@@ -23,172 +12,161 @@
   <script>
     const firebaseConfig = {
       apiKey: "YOUR_FIREBASE_API_KEY",
-      authDomain: "YOUR_FIREBASE_PROJECT.firebaseapp.com",
-      projectId: "YOUR_FIREBASE_PROJECT",
-      storageBucket: "YOUR_FIREBASE_PROJECT.appspot.com",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
+      authDomain: "smart-content-ai.firebaseapp.com",
+      projectId: "smart-content-ai",
+      storageBucket: "smart-content-ai.appspot.com",
+      messagingSenderId: "1234567890",
+      appId: "1:1234567890:web:abcdef123456"
     };
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
   </script>
 
   <style>
-    body {font-family: Arial; margin:0; padding:0; background:#f9f9f9; color:#333;}
-    header {background:#004080; color:#fff; text-align:center; padding:20px;}
-    section {padding:20px; margin:20px auto; max-width:900px; background:#fff; border-radius:8px;}
-    .card {background:#f0f8ff; padding:15px; border-radius:6px; margin:10px;}
-    button {padding:10px 20px; margin:5px; border:none; border-radius:5px; background:#0073e6; color:#fff; cursor:pointer;}
-    button:hover {background:#005bb5;}
-    footer {text-align:center; background:#004080; color:#fff; padding:15px;}
-    .dark-mode {background:#121212; color:#f1f1f1;}
-    .dark-mode section {background:#1e1e1e; color:#f1f1f1;}
+    body {font-family: Arial, sans-serif; margin:0; padding:0;}
+    section {padding:40px; border-bottom:1px solid #ddd;}
+    .dark-mode {background:#222; color:#fff;}
+    button {padding:10px 20px; margin:5px;}
+    iframe {width:100%; height:400px; border:none;}
   </style>
 </head>
 <body>
-  <header>
-    <h1>SmartContentAI</h1>
-    <p>Global SaaS platform for multilingual content and automation</p>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </header>
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="dd4e9e53-2015-40f2-853f-17cdb6eff82d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
   <!-- Features -->
   <section id="features">
-    <h2>🔑 Key Features</h2>
-    <div class="card">🌐 Multilingual AI</div>
-    <div class="card">📈 SEO Optimization</div>
-    <div class="card">☁️ Cloud SaaS</div>
-    <div class="card">⚡ Automation</div>
+    <h2>Key Features</h2>
+    <p>🌐 Multilingual AI, 🔍 SEO Optimization, ☁️ SaaS Cloud, ⚡ Automation</p>
   </section>
 
-  <!-- Subscription Plans -->
+  <!-- Plans -->
   <section id="plans">
-    <h2>📦 Subscription Plans</h2>
-    <div class="card">Basic – $12/month</div>
-    <div class="card">Pro – $29/month</div>
-    <div class="card">Enterprise – $99/month</div>
+    <h2>Subscription Plans</h2>
+    <p>Basic: €17/month</p>
   </section>
 
-  <!-- Payment -->
+  <!-- Payment Methods -->
   <section id="payment">
-    <h2>💳 Payment Methods</h2>
-    <p>Bank Transfer: IBAN EG660022012880211112491757001</p>
-    <button onclick="window.location.href='https://www.paypal.com/paypalme/drzyogo'">Pay with PayPal</button>
-    <button onclick="alert('Stripe integration coming soon')">Pay with Stripe</button>
+    <h2>Payment Methods</h2>
+    <a href="https://paypal.me/drzyogo" target="_blank"><button>Pay with PayPal</button></a>
+    <button onclick="alert('Stripe: mustangteam.com@gmail.com')">Pay with Stripe</button>
   </section>
 
-  <!-- Try the Model -->
-  <section id="ai-demo">
-    <h2>🤖 Try the Model</h2>
-    <button onclick="document.getElementById('output').innerText='AI generated demo content...'">Try Demo</button>
-    <div id="output"></div>
+  <!-- Bank Transfer -->
+  <section id="bank">
+    <h2>Bank Transfer</h2>
+    <h3>EGP Account</h3>
+    <p>IBAN: EG660022012880211112491757001<br>SWIFT: ABRKEGCAXXX<br>Branch: Al Hadiqa Al dawlia</p>
+    <h3>USD Account</h3>
+    <p>IBAN: EG310022012880211102491757001<br>SWIFT: ABRKEGCAXXX<br>Branch: Al Hadiqa Al dawlia</p>
   </section>
 
-  <!-- Smart Chatbot -->
-  <section id="chatbot">
-    <h2>🤖 Smart Chatbot</h2>
-    <p>Ask me anything about SmartContentAI and I will answer instantly.</p>
+  <!-- Amazon Affiliate -->
+  <section id="amazon">
+    <h2>Amazon Products</h2>
+    <iframe src="https://www.amazon.com/affiliate-link-example"></iframe>
   </section>
 
-  <!-- User Dashboard -->
-  <section id="dashboard">
-    <h2>👤 User Dashboard</h2>
-    <form id="signupForm">
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <input type="submit" value="Sign Up">
-    </form>
-    <form id="loginForm">
-      <input type="email" id="loginEmail" placeholder="Email" required>
-      <input type="password" id="loginPassword" placeholder="Password" required>
-      <input type="submit" value="Login">
-    </form>
-    <div id="userData"></div>
+  <!-- Google AdSense -->
+  <section id="adsense">
+    <h2>Sponsored Ads</h2>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXX"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </section>
-
-  <script>
-    function toggleDarkMode(){document.body.classList.toggle("dark-mode");}
-    const signupForm=document.getElementById('signupForm');
-    signupForm.addEventListener('submit',async(e)=>{
-      e.preventDefault();
-      const email=document.getElementById('email').value;
-      const password=document.getElementById('password').value;
-      try{
-        const userCredential=await firebase.auth().createUserWithEmailAndPassword(email,password);
-        const user=userCredential.user;
-        await db.collection('users').doc(user.uid).set({email:user.email,plan:"Basic"});
-        document.getElementById('userData').innerText="User registered: "+user.email;
-      }catch(error){alert(error.message);}
-    });
-    const loginForm=document.getElementById('loginForm');
-    loginForm.addEventListener('submit',async(e)=>{
-      e.preventDefault();
-      const email=document.getElementById('loginEmail').value;
-      const password=document.getElementById('loginPassword').value;
-      try{
-        const userCredential=await firebase.auth().signInWithEmailAndPassword(email,password);
-        const user=userCredential.user;
-        document.getElementById('userData').innerText="Logged in: "+user.email;
-      }catch(error){alert(error.message);}
-    });
-  </script>
 
   <!-- FAQ -->
   <section id="faq">
-    <h2>❓ FAQ</h2>
-    <p>How do I subscribe? Choose a plan and pay via Bank transfer, PayPal, or Stripe.</p>
-    <p>Can I cancel anytime? Yes.</p>
+    <h2>FAQ</h2>
+    <p>All services are free except optional premium upgrades.</p>
   </section>
 
   <!-- Testimonials -->
   <section id="testimonials">
-    <h2>💬 Testimonials</h2>
-    <p>"SmartContentAI helped me grow my business internationally!"</p>
+    <h2>Testimonials</h2>
+    <p>"SmartContentAI changed my workflow!"</p>
   </section>
 
   <!-- Newsletter -->
   <section id="newsletter">
-    <h2>📧 Newsletter</h2>
-    <form>
-      <input type="email" placeholder="Enter your email">
-      <input type="submit" value="Subscribe">
-    </form>
+    <h2>Newsletter</h2>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
   </section>
 
-  <!-- Contact Us -->
+  <!-- Contact -->
   <section id="contact">
-    <h2>📞 Contact Us</h2>
+    <h2>Contact</h2>
     <p>Email: support@smartcontentai.com</p>
-    <p>Phone: +201126674337</p>
   </section>
 
-  <footer>
-    <p>© 2026 SmartContentAI</p>
-  </footer>
+  <!-- Dashboard -->
+  <section id="dashboard">
+    <h2>Dashboard</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <script>
+      function signup(){
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then(user => alert('Signed up: ' + user.user.email))
+          .catch(err => alert(err.message));
+      }
+      function login(){
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then(user => alert('Logged in: ' + user.user.email))
+          .catch(err => alert(err.message));
+      }
+    </script>
+  </section>
 
-  <!-- Service Worker -->
+  <!-- Try the Model -->
+  <section id="model">
+    <h2>Try the Model</h2>
+    <input type="text" id="userInput" placeholder="اكتب نص للتجربة">
+    <button onclick="runModel()">Run Demo</button>
+    <pre id="output"></pre>
+  </section>
+
   <script>
-    const swCode=`
-      self.addEventListener('install',event=>{
-        event.waitUntil(
-          caches.open('smartcontent-cache').then(cache=>{
-            return cache.addAll(['./index.html']);
-          })
-        );
+    async function runModel(){
+      const userText = document.getElementById("userInput").value;
+      const response = await fetch("https://api-inference.huggingface.co/models/gpt2", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer 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"
+        },
+        body: JSON.stringify({ inputs: userText })
       });
-      self.addEventListener('fetch',event=>{
-        event.respondWith(
-          caches.match(event.request).then(response=>{
-            return response||fetch(event.request);
-          })
-        );
-      });
-    `;
-    const blob=new Blob([swCode],{type:'application/javascript'});
-    const swUrl=URL.createObjectURL(blob);
-    if('serviceWorker' in navigator){
-      navigator.serviceWorker.register(swUrl).then(()=>console.log('Service Worker Registered'));
+      const data = await response.json();
+      document.getElementById("output").textContent = data[0].generated_text;
     }
   </script>
+
+  <!-- Dark Mode -->
+  <section id="darkmode">
+    <h2>Dark Mode</h2>
+    <button onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+  </section>
+
+  <!-- Crisp Chatbot -->
+  <script type="text/javascript">
+    window.$crisp=[];
+    window.CRISP_WEBSITE_ID="dde9e35f-2015-40f2-b353-17cd0eef1828";
+    (function(){
+      d=document;s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";s.async=1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
+
 </body>
 </html> 
