@@ -5,7 +5,7 @@
   <title>SmartContentAI</title>
   <meta name="description" content="SmartContentAI - Global AI-powered SaaS for multilingual content, SEO, automation, and cloud services.">
   <meta name="keywords" content="AI, SaaS, SEO, Automation, Multilingual, Cloud, SmartContentAI">
-  <meta name="author" content="Dr Mohammad Mustafa">
+  <meta name="author" content="SmartContentAI">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Analytics -->
@@ -24,6 +24,18 @@
       google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX",
       enable_page_level_ads: true
     });
+  </script>
+
+  <!-- Schema.org for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SmartContentAI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "AI-powered SaaS for multilingual content, SEO, automation, and cloud services."
+  }
   </script>
 
   <style>
@@ -48,9 +60,19 @@
   </style>
 </head>
 <body>
+  <!-- Language Selector -->
+  <div style="text-align:right; padding:10px;">
+    <select id="languageSwitcher" onchange="setLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+    </select>
+  </div>
+
   <header>
-    <h1>SmartContentAI</h1>
-    <p>A global AI-powered SaaS platform for multilingual content creation, workflow automation, and more.</p>
+    <h1 id="title">SmartContentAI</h1>
+    <p id="subtitle">A global AI-powered SaaS platform for multilingual content creation, workflow automation, and more.</p>
     <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
   </header>
 
@@ -69,9 +91,9 @@
 
   <!-- Features Section -->
   <section id="features">
-    <h2>🔑 Key Features</h2>
+    <h2 id="featuresTitle">🔑 Key Features</h2>
     <div class="features">
-      <div class="card"><h3>🌐 Multilingual AI</h3><p>Create and optimize content in English, Arabic, French, Spanish, and more.</p></div>
+      <div class="card"><h3>🌐 Multilingual AI</h3><p>Create and optimize content in multiple languages.</p></div>
       <div class="card"><h3>📈 SEO Optimization</h3><p>Boost visibility and ranking with integrated SEO tools.</p></div>
       <div class="card"><h3>☁️ Cloud SaaS</h3><p>Secure, scalable, and accessible anywhere, anytime.</p></div>
       <div class="card"><h3>⚡ Automation</h3><p>Streamline workflows and scale productivity.</p></div>
@@ -90,7 +112,7 @@
 
   <!-- Payment Section -->
   <section id="payment">
-    <h2>💳 Payment Methods</h2>
+    <h2 id="paymentTitle">💳 Payment Methods</h2>
     <p>Trial subscription ($6 for the first month), then $12 monthly:</p>
     <ul>
       <li><strong>IBAN:</strong> EG660022012880211112491757001</li>
@@ -113,7 +135,6 @@
   <!-- Smart Chatbot -->
   <section id="chatbot">
     <h2>🤖 Smart Chatbot</h2>
-    <p>Ask me anything about SmartContentAI and I will answer instantly.</p>
     <iframe src="https://your-chatbot-service.com/embed" width="100%" height="400"></iframe>
   </section>
 
@@ -122,29 +143,4 @@
     <h2>❓ Frequently Asked Questions</h2>
     <p><strong>How do I subscribe?</strong> Choose a plan and pay via bank transfer, PayPal, or Stripe.</p>
     <p><strong>Can I cancel anytime?</strong> Yes, you can cancel your subscription at any time.</p>
-    <p><strong>Is my data secure?</strong> Absolutely, we use cloud SaaS with advanced security.</p>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <h2>💬 Testimonials</h2>
-    <p>"SmartContentAI helped me grow my business internationally!" – Client A</p>
-    <p>"The automation tools saved me hours every week." – Client B</p>
-  </section>
-
-  <!-- Newsletter -->
-  <section id="newsletter">
-    <h2>📩 Newsletter Signup</h2>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
-      <input type="submit" value="Subscribe">
-    </form>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>📞 Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea 
+    <p><strong>Is my data secure?</strong> Absolutely 
