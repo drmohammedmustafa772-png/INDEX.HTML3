@@ -51,7 +51,7 @@
     <p>Global SaaS platform for multilingual content and automation</p>
     <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
-
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="dd4e9e53-2015-40f2-853f-17cdb6eff82d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   <!-- Features -->
   <section id="features">
     <h2>🔑 Key Features</h2>
