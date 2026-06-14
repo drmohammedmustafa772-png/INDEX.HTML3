@@ -35,7 +35,7 @@
   <!-- Features -->
   <section id="features">
     <h2>Key Features</h2>
-    <p>🌐 Multilingual AI, 🔍 SEO Optimization, ☁️ SaaS Cloud, ⚡ Automation</p>
+    <p>🌐 Multilingual AI, 📈 SEO Optimization, ☁️ SaaS Cloud, ⚡ Automation</p>
   </section>
 
   <!-- Plans -->
@@ -166,6 +166,15 @@
       s.src="https://client.crisp.chat/l.js";s.async=1;
       d.getElementsByTagName("head")[0].appendChild(s);
     })();
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
 </body>
