@@ -11,7 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
   <script>
     const firebaseConfig = {
-      apiKey: "YOUR_FIREBASE_API_KEY",
+      apiKey: "AIzaSyC-YourRealKey",
       authDomain: "smart-content-ai.firebaseapp.com",
       projectId: "smart-content-ai",
       storageBucket: "smart-content-ai.appspot.com",
